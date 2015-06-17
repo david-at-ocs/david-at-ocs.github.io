@@ -1,0 +1,47 @@
+#Movie Database
+
+I made a movie database that (currently) has three tables to hold movie inforamtion, location information and infromation about people who worked on the movies.
+
+
+##Movie
+
+Movie is a Class that mostly contains methods that have Sqlite3 commands to interact with the movies table.  
+
+###Methods
+
+####self.all
+
+This method stores everthing from the movies table in a hash called results. An each loop is used to iterate over that varialble, create a new Movie object from each of the records, and push each new object into an Array called results_as_objects. The method then returns that Array.
+
+
+``````ruby
+  def self.all
+    results = MOVIEDB.execute('SELECT * FROM movies;')
+    results_as_objects = []
+    
+    results.each do |result_hash|
+      results_as_objects << Movie.new(result_hash["id"], result_hash["title"], result_hash["genre"], result_hash["location_id"])
+    end
+    
+    return results_as_objects
+  end
+
+```
+
+####self.locations
+
+self.locations uses an a passed-in argument (loc_id) to search, using sqlite3, for any movie records that have that location.  Like self.all it saves the resulting hash in a variable called results.  It then iterates over that hash, created new Movie objects for each record and stores each of those objects in an array.  It then returns that Array.
+
+``````ruby
+  def self.locations(loc_id)
+    results = MOVIEDB.execute("SELECT * FROM movies WHERE location_id = '#{loc_id}';")
+    
+    results_as_objects =[]
+    
+    results.each do |result_hash|
+      results_as_objects << Movie.new(result_hash["id"], result_hash["title"], result_hash["genre"], result_hash["location_id"])
+    end
+    
+    return results_as_objects
+  end
+```
