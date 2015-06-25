@@ -1,0 +1,9 @@
+---
+layout: post
+title:  "ORM"
+date:   2015-06-24 09:10:57
+categories: code ORM video 
+---
+##ORM Video
+Here's a <a href="https://www.youtube.com/watch?v=zNe8HTn8qO4&feature=youtu.be">video I made</a> explaining some ORM stuff in a beer rating program I'm working on.  Have fun.
+
