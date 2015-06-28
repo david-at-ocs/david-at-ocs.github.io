@@ -17,4 +17,6 @@ Methods are a series of statements meant to be used repeatedly.
 A variable is a holder, or container for data.  A varible can contain several different data types including Integers, Hashes, Arrays, Strings, etc.  It's important to remember that variables are just pointers to the data and not the data itself.
 
 ##What is a request?
-A request is a 
+Something to do with HTTP protocol?  I believe clicking on a link in a web page is a type of request, a request to get something (like another web page) from the server.  I might be wrong about this.
+
+##What is a route?
