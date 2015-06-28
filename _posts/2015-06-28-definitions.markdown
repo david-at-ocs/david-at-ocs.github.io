@@ -20,3 +20,7 @@ A variable is a holder, or container for data.  A varible can contain several di
 Something to do with HTTP protocol?  I believe clicking on a link in a web page is a type of request, a request to get something (like another web page) from the server.  I might be wrong about this.
 
 ##What is a route?
+I'm not sure if a route (in our world) is specific to erb files and Sinatra.  But in that context, a route is the path Sinatra will take to get a page in response to a request.
+
+##In the context of a web application, what is a "response"?
+A response is what the server feeds the browser once a request has been submitted.
